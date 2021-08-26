@@ -1,21 +1,22 @@
 package escuelaing.edu.co.dto;
-public class UserDto {
 
+import java.io.Serializable;
 
-    private String name; 
-    private String email; 
-    private String lastName; 
-    private String createdAt;
+public class UserDto implements Serializable {
+
+    private String name;
+    private String email;
+    private String lastName;
 
     public UserDto() {
     }
-        public UserDto(String name, String email, String lastName, String createdAt) {
+
+    public UserDto(String name, String email, String lastName) {
         this.name = name;
         this.email = email;
         this.lastName = lastName;
-        this.createdAt = createdAt;
+
     }
-   
 
     public String getName() {
         return name;
@@ -41,12 +42,4 @@ public class UserDto {
         this.lastName = lastName;
     }
 
-    public String getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(String createdAt) {
-        this.createdAt = createdAt;
-    }
-    
 }
